@@ -1,0 +1,30 @@
+<div class= "content">
+    <?php view::content()?>
+    <h3>PERSONAS</h3>
+    <table>
+        <thead>
+        <th>ID</th>
+        <th>nombres</th>
+        <th>apellidos</th>
+        <th>edad</th>
+        <th>email</th>
+        <th>fecha</th>
+        <th>acciones</th>
+        </thead>
+    </table>
+    <?php foreach($listPersonas->items as $item); ?>
+           <?php echo $item->nombres ?>
+           <tr>
+               <td><?php echo $item->id ?></td>
+               <td><?php echo $item->nombres ?></td>
+               <td><?php echo $item->apellidos?></td>
+               <td><?php echo $item->edad?></td>
+               <td><?php echo $item->email?></td>
+               <td><?php echo $item->fecha?></td>
+               <td>
+                   <?php echo html::link('personas/borrar/'.$item->id,'<i class="materialze-icons">delete</i>' ,'class="btn red"')?>
+                   <?php echo html::link('personas/borrar/'.$item->id,'<i class="materialze-icons">edit</i>' ,'class="btn green"')?>
+                </td>
+           </tr>
+    <?php endforeach ?>
+    <div></div>

@@ -1,0 +1,22 @@
+<h1>Registro de personas</h1>
+<div class="divider"></div>
+<div class="row">
+    <?= form::open('personas/guardar','post',); ?>
+          <div class="input-field-col s6">
+              <?= form::text('personas.nombres', 'id="nombres"')?>
+              <?= form::label('Nombres','nombres')?>
+          </div>
+          <div class="input-field-col s6">
+              <?= form::text('personas.apellidos', 'id="apellidos"')?>
+              <?= form::label('Apellidos','apellidos')?>
+          </div>
+          <div class="input-field-col s6">
+              <?= form::number('personas.edadedad', 'id="edad"')?>
+              <?= form::label('Edad','edad')?>
+          </div>
+          <div class="input-field-col s6">
+              <?= form::text('personas.email', 'id="email"')?>
+              <?= form::label('Email','email')?>
+          </div>
+    <?= form::close();?>
+</div>
